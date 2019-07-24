@@ -12,7 +12,7 @@ with open("README.rst", "r") as fh:
 setuptools.setup(
     name="flaskapp",
     python_requires='>=3.4',
-    version="0.0.7",
+    version="0.0.9",
     author="ksg97031",
     author_email="ksg97031@gmail.com",
     description="Manage flask project simply",

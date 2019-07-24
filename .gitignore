@@ -4,4 +4,4 @@ dist
 temp
 build
 *.swp
-
+*.pyc

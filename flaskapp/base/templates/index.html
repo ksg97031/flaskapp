@@ -1,8 +1,12 @@
 <html>
 <head>
-<title>flask-projector</title>
+<title>{PROJECT_NAME}</title>
 </head>
 <body>
 	Index Page
+	{% if session['logged_in'] %}
+		<h1>{{ session['username'] }}</h1>
+	{% endif %}
+
 </body>
 </html>
