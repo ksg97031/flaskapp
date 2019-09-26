@@ -16,7 +16,7 @@ setuptools.setup(
     author="ksg97031",
     author_email="ksg97031@gmail.com",
     description="Manage flask project simply",
-    install_requires=['flask', 'pathlib'],
+    install_requires=['flask', 'pathlib', 'sqlalchemy'],
     long_description=long_description,
     long_description_content_type="text/x-rst",
     url="https://github.com/ksg97031/flaskapp",
