@@ -1,12 +1,15 @@
 flaskapp
 ============================================================
-| Create a flask project one by one is very troublesome to me.
-| This project can create base files of flask project fast and simple.
+| Creating flask project one by one is very troublesome to ours.
+| 'flaskapp' can create a flask project with base files fast and simple.
 |
 
 .. code:: sh
 
   $ pip install flaskapp
+
+.. code:: sh
+
   $ flaskapp create [your_project_name]
   $ cd [your_project_name]
   $ python app.py
@@ -16,5 +19,3 @@ flaskapp
     Use a production WSGI server instead.
    * Debug mode: off
    * Running on http://0.0.0.0:80/ (Press CTRL+C to quit) 
-
-
