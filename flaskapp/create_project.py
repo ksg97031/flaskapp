@@ -45,4 +45,7 @@ def run(name, target_dir=None):
     ctx = {'name': name}
     templates(project_dir, config.BASE_DIR, ctx)
     print("Successed to make project dir: '{:s}'".format(str(project_dir.resolve())))
-    
+
+def sample():
+    sampleProject = 1
+    print(sampleProject)
