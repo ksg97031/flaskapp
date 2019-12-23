@@ -10,8 +10,11 @@ flaskapp
 
 .. code:: sh
 
-  $ flaskapp create [your_project_name]
-  $ cd [your_project_name]
+  $ flaskapp create your_project_name
+  $ cd your_project_name
+  
+.. code:: sh
+  
   $ python app.py
    * Serving Flask app "app" (lazy loading)
    * Environment: production
