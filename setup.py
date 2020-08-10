@@ -12,10 +12,10 @@ with open("README.rst", "r") as fh:
 setuptools.setup(
     name="flaskapp",
     python_requires='>=3.4',
-    version="0.0.9",
+    version="1.0.5",
     author="ksg97031",
     author_email="ksg97031@gmail.com",
-    description="Manage flask project simply",
+    description="Create flask project simply",
     install_requires=['flask', 'pathlib', 'sqlalchemy', 'flask-sqlalchemy'],
     long_description=long_description,
     long_description_content_type="text/x-rst",
@@ -25,6 +25,9 @@ setuptools.setup(
     package_data={
         "flaskapp.base": ["*"],
         "flaskapp.base.templates": ["*"],
+        "flaskapp.base.static": ["*"],
+        "flaskapp.base.static.js": ["*"],
+        "flaskapp.base.static.css": ["*"],
     },
     classifiers=[
         "Programming Language :: Python :: 3",
