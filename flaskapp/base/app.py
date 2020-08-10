@@ -1,22 +1,22 @@
+import sys
 import hashlib
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, jsonify
 from database import db_session 
 from models import User
 from utils import get_hash
 
 app = Flask(__name__)
-app.secret_key = "{SECRET_KEY}"
+app.secret_key = "{SECRET_KEY}" # random generate
 
+########################
+# Sample Account Page
+########################
 @app.teardown_appcontext
 def shutdown_session(exception=None):
     db_session.remove()    
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 @app.route('/sign', methods=['GET', 'POST'])
-def sign():
+def sign_sample():
     if request.method == 'POST':
         username = request.form['username']
         password = get_hash(request.form['password'], app.secret_key)
@@ -31,7 +31,7 @@ def sign():
     return render_template('sign.html')
 
 @app.route('/login', methods=['GET', 'POST'])
-def login():
+def login_sample():
     if request.method == 'POST':
         username = request.form['username']
         password = get_hash(request.form['password'], app.secret_key)
@@ -44,7 +44,26 @@ def login():
 
     return render_template('login.html')    
 
+########################
+# Sample JSON API
+########################
+@app.route('/json', methods=['GET', 'POST'])
+def json_sample():
+    data = {'sample':'json'}
+    return jsonify(data), 200
+
+########################
+# Index
+########################
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80)
+    port = 80
+    if len(sys.argv) > 1:
+        port = int(sys.argv[1])
+
+    app.run(host='0.0.0.0', port=port)
 
