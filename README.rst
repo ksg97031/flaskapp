@@ -1,7 +1,7 @@
 flaskapp
 ============================================================
 | Creating flask project one by one is very troublesome to ours.
-| 'flaskapp' can create a flask project with base files fast and simple.
+| 'flaskapp' can create a empty flask project directly.
 |
 
 .. code:: sh
